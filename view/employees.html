@@ -1,0 +1,48 @@
+
+{{  define "list_mployees"}}
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Asset Management</title>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <div>{{template "menu"}}</div>
+    <h2> Employee Details </h2>
+
+    <div> 
+        <a href="/add">Add</a>
+    <table border="1" style="background-color:blanchedalmond ;" width="100%" >
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>DOB</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Address</th>
+      </tr>
+       </thead>
+       <tbody>
+    {{ range . }}
+      <tr>
+        <td>{{ .IdEmployees }}</td>
+        <td> {{ .Name }} </td>
+        <td>{{ .DOB }} </td> 
+         <td> {{ .Email }} </td>
+        <td>{{ .Mobile }} </td> 
+        <td>{{ .Address }} </td> 
+        <td><a href="/show?id={{ .IdEmployees }}&mode=view">View</a></td>
+        <td><a href="/edit?id={{ .IdEmployees }}&mode=edit">Edit</a></td>
+        <td><a href="/delete?id={{ .IdEmployees }}">Delete</a><td>
+      </tr>
+    {{ end }}
+       </tbody>
+    </table>
+  </div>
+ 
+    </body>
+    <div>{{template "footer"}}</div>
+    </html>
+    {{end}}
+ 

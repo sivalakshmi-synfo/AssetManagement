@@ -1,0 +1,23 @@
+{{define "dashboard"}}
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Asset Management</title>
+        <meta charset="UTF-8" />
+    </head>
+    <body style="text-align: center; ">  
+       
+    <h2>Asset Management</h2> 
+    <a href="/employees">
+    <div align="center" style="border: 1; border-style: dotted; width: 30%; text-align: center; margin: 20px; background-color: bisque;"> 
+   <h2>No of employees </h2>
+      <div style="color: brown; font-size: 100px; ">{{.}}</div>
+  </div>
+</a>   
+{{template "footer" }}
+    </body>
+    
+    
+    </html>
+ 
+{{end}}

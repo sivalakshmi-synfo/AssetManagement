@@ -1,0 +1,24 @@
+{{define "showView"}}
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Asset Management</title>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+    <h2>View Employee</h2>
+    <div>{{template "menu"}}</div>
+    <div>               
+       
+        <div><strong>Name:  </strong> {{ .Name }} </div>
+        <div><strong>Date Of Birth: </strong>{{ .DOB }} </div> 
+         <div><strong>Email:    </strong> {{ .Email }} </div>
+        <div><strong>Mobile:    </strong>{{ .Mobile }} </div> 
+        <div><strong>Address:   </strong>{{ .Address }} </div>                       
+  </div>
+ 
+    </body>
+    <div>{{template "footer"}}</div>
+    </html>
+ 
+{{end}}

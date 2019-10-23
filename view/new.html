@@ -1,0 +1,26 @@
+{{define "addemployee"}}
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Asset Management</title>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+            <div>{{template "menu"}}</div>
+    <h2>Add Employee </h2>
+    <form method="POST" action="add">
+    <div>                      
+        <div><strong>Name:</strong><input type="text" name="Name" ></input></div>
+        <div><strong>Date Of Birth:</strong> <input type="date" name="DOB"  ></input> </div> 
+         <div><strong>Email:</strong> <input type="text" name="Email" ></input></div>
+        <div><strong>Mobile:</strong><input type="text" name="Mobile"></input> </div> 
+        <div><strong>Address:</strong><input type="text" name="Address" multiple ></input> </div>      
+        <input type="submit" value="Add" />                 
+  </div>
+  </form> 
+  
+    </body>
+    <div>{{template "footer"}}</div>
+    </html>
+ 
+{{end}}

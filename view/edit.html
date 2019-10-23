@@ -1,0 +1,26 @@
+{{define "edit"}}
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Asset Management</title>      
+    </head>
+    <body>
+            <div>{{template "menu"}}</div>
+    <h2>Edit Employee </h2>
+    <form method="POST" action="update">
+    <div>               
+        <div><input type="hidden" name="IdEmployees" value="{{.IdEmployees}}"></input> </div>
+        <div><strong>Name:</strong><input type="text" name="Name" value="{{.Name}}"></input></div>
+        <div><strong>Date Of Birth:</strong> <input type="date" name="DOB"  value="{{ .DOB }}"></input> </div> 
+         <div><strong>Email:</strong> <input type="text" name="Email" value="{{.Email}}"></input></div>
+        <div><strong>Mobile:</strong><input type="text" name="Mobile" value="{{.Mobile}}"></input> </div> 
+        <div><strong>Address:</strong><input type="text" name="Address" multiple value="{{.Address}}"></input> </div>      
+        <input type="submit" value="Update" /> 
+                            
+  </div>
+  </form>
+ 
+    </body>
+    <div>{{template "footer"}}</div>
+    </html>
+ {{end}}
